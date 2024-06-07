@@ -656,6 +656,10 @@ body {
   margin-right: 2rem;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
@@ -694,6 +698,10 @@ body {
 
 .w-px {
   width: 1px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .items-center {
@@ -759,6 +767,11 @@ body {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.py-\[12px\] {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .font-Dana {
@@ -846,6 +859,14 @@ body {
 .child-hover\:text-orange-300 > *:hover {
   --tw-text-opacity: 1;
   color: rgb(253 186 116 / var(--tw-text-opacity));
+}
+
+.dark\:inline-block:is(.dark *) {
+  display: inline-block;
+}
+
+.dark\:hidden:is(.dark *) {
+  display: none;
 }
 
 .dark\:bg-zinc-700:is(.dark *) {

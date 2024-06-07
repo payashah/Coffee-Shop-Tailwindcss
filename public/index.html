@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffeee Shop</title>
     <link rel="stylesheet" href="./styles/app.css">
+    <script type="text/javascript">
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 
 <body class="font-Dana bg-gray-100 dark:bg-zinc-800">
@@ -40,7 +47,7 @@
     <header class=" fixed top-9 left-0 right-0 w-[90%] h-24 bg-black/50
          mx-auto flex justify-between items-center px-10 rounded-2xl tracking-tightest backdrop-blur-[6px]">
         <!-- logo & menu -->
-        <nav class="flex justify-between items-center">
+        <nav class="flex justify-between items-center ">
             <div class="ml-5">
                 <img src="./pic/app-logo.png" alt="logo">
             </div>
@@ -92,28 +99,31 @@
         <!-- cart & login link -->
         <div class="flex justify-between items-center text-orange-200">
             <!-- cart & mode -->
-            <div class="flex gap-x-4">
-                <svg class="w-8 h-8">
+            <div class="flex gap-x-4 py-[12px]">
+                <svg class="w-8 h-8 ">
                     <use xlink:href="#shopping-cart"></use>
                 </svg>
-                <a href="#">
-                    <svg class="w-8 h-8">
+                <div class=" cursor-pointer" id="toggle-theme">
+                    <svg class=" w-8 h-8 inline-block dark:hidden">
                         <use xlink:href="#moon-mode"></use>
                     </svg>
-                </a>
+                    <svg class="w-8 h-8 hidden dark:inline-block ">
+                        <use xlink:href="#light-mode"></use>
+                    </svg>
+                </div>
             </div>
             <div class="w-px h-16 bg-gray-300 mr-8 ml-8"></div>
             <!-- login link -->
             <div class="flex items-center gap-x-4">
                 <svg class="w-8 h-8">
-                    <use xlink:href="#btn-arrow"></use>
+                    <use xlink:href="#btn-arrow "></use>
                 </svg>
                 <a href="#">ورود | ثبت نام</a>
             </div>
         </div>
     </header>
 
-
+    <script src="/public/scripts/app.js"></script>
 </body>
 
 </html>
