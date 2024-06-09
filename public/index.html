@@ -45,19 +45,24 @@
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
         </symbol>
+        <symbol id="bars-mobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </symbol>
+          
+          
 
 
 
     </svg>
-
-    <header class=" fixed top-9 left-0 right-0 w-[90%] h-24 bg-black/50
-         mx-auto flex justify-between items-center px-10 rounded-2xl tracking-tightest backdrop-blur-[6px]">
+<!-- header pc -->
+    <header class="fixed top-9 left-0 right-0 md:-[98%] lg:w-[90%] h-24 bg-black/50
+         mx-auto hidden md:flex justify-between items-center px-10 rounded-2xl tracking-tightest backdrop-blur-[6px] ">
         <!-- logo & menu -->
-        <nav class="flex justify-between items-center ">
-            <div class="ml-5">
+        <nav class="flex justify-between items-center gap-x-5">
+            <div class="">
                 <img src="./pic/app-logo.png" alt="logo">
             </div>
-            <ul class="flex  gap-x-9 text-xl text-gray-300 h-[56px] child:leading-[56px]">
+            <ul class="flex  gap-x-5  text-xl text-gray-300 h-[56px] child:leading-[56px]">
                 <li class="text-orange-200">
                     <a href="#">صفحه اصلی</a>
                 </li>
@@ -103,7 +108,7 @@
             </ul>
         </nav>
         <!-- cart & login link -->
-        <div class="flex justify-between items-center text-orange-200 h-[56px]">
+        <div class="flex justify-between items-center text-orange-200 h-[56px]  gap-x-5">
             <!-- cart & mode -->
             <div class="flex justify-between items-center gap-x-4">
                 <!-- cart -->
@@ -126,15 +131,32 @@
                             </a>
                         </div>
                         <!-- cart body -->
-                        <div class="">
-                            <div class="flex justify-start items-center border-b-2 border-gray-300">
-                                <img class="w-36 h-auto" src="./pic/products/p1.png" alt="">
-                                <div>
-                                    <h2>قهوه اسپرسو بن مانو مدل پرسیکا 250 گرمی</h2>
-                                    <div class="mt-5">
-                                        <h4 class="text-green-500">14.500 تومان تخفیف</h4>
-                                        <h3 class="font-DanaDemiBold">175.000 <span class="text-xs">تومان</span>
-                                        </h3>
+                        <div class="border-b-2 border-gray-300 divide-y devide-gray-100 dark:divide-white/10 py-5">
+                            <!-- product 1 -->
+                            <div class="">
+                                <div class="flex justify-start items-center ">
+                                    <img class="w-36 h-auto" src="./pic/products/p1.png" alt="">
+                                    <div>
+                                        <h2>قهوه اسپرسو بن مانو مدل پرسیکا 250 گرمی</h2>
+                                        <div class="mt-5">
+                                            <h4 class="text-green-500">14.500 تومان تخفیف</h4>
+                                            <h3 class="font-DanaDemiBold">175.000 <span class="text-xs">تومان</span>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 2 -->
+                            <div class="">
+                                <div class="flex justify-start items-center ">
+                                    <img class="w-36 h-auto" src="./pic/products/p2.png" alt="">
+                                    <div>
+                                        <h2>قهوه امریکانو بن مانو مدل گلد 250 گرمی</h2>
+                                        <div class="mt-5">
+                                            <h4 class="text-green-500">17.500 تومان تخفیف</h4>
+                                            <h3 class="font-DanaDemiBold">145.000 <span class="text-xs">تومان</span>
+                                            </h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +165,7 @@
                         <div class="flex justify-between items-center">
                             <div>
                                 <h6 class="text-gray-300">مبلغ قابل پرداخت</h6>
-                                <h4 class="font-DanaDemiBold">160.500 <span class="text-xs">تومان</span></h4>
+                                <h4 class="font-DanaDemiBold">288.000 <span class="text-xs">تومان</span></h4>
                             </div>
                             <div class="cursor-pointer bg-green-700 text-white px-10 py-2 text-xl rounded-xl">
                                 <button>سفارش</button>
@@ -163,15 +185,41 @@
                 </div>
             </div>
             <!-- border vertical -->
-            <div class="w-px h-16 bg-gray-300 mr-8 ml-8"></div>
+            <div class="w-px h-full bg-gray-300"></div>
             <!-- login link -->
-            <div class="flex items-center gap-x-4">
+            <div class="flex items-center gap-x-5">
                 <svg class="w-8 h-8">
                     <use xlink:href="#btn-arrow "></use>
                 </svg>
-                <a href="#">ورود | ثبت نام</a>
+                <a class="hidden xl:inline-block" href="#">ورود | ثبت نام</a>
             </div>
         </div>
+    </header>
+
+    <!-- header mobile -->
+
+    <header class="flex md:hidden justify-between items-center h-16 px-4 bg-white dark:bg-zinc-700">
+        <!-- bar mobile -->
+        <div class="text-zinc-700 dark:text-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+        </div>
+        <!-- bar menu -->
+         <div class="fixed w-64 min-h-screen bg-white dark:bg-zinc-700 top-0 right-0">
+
+         </div>
+        <!-- logo mobile -->
+          <img  src="./pic/svgs/logo-type.svg" alt="">
+          <!-- shopping-cart mobile -->
+          <div class="text-zinc-700 dark:text-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+              </svg>
+          </div>
+          
+          
+          
     </header>
 
     <script src="/public/scripts/app.js"></script>
